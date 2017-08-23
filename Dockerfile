@@ -8,8 +8,8 @@ RUN yum install -y wget gcc automake autoconf libtool make gcc-c++ gtk2 libXtst 
 # Oracle Java 1.8
 RUN \
   cd /tmp && \
-  wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u102-b14/jdk-8u102-linux-x64.rpm && \
-  yum localinstall -y jdk-8u102-linux-x64.rpm && yum clean all && \
+  wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-linux-x64.rpm && \
+  yum localinstall -y jdk-8u144-linux-x64.rpm && yum clean all && \
   echo 'export JAVA_HOME=/usr/java/jdk1.8.0_102/' >> /etc/profile && \
   echo 'export JRE_HOME=/usr/java/jdk1.8.0_102/jre' >> /etc/profile && \
   echo 'export PATH=$PATH:$HOME/bin:$JAVA_HOME/bin' >> /etc/profile && \
